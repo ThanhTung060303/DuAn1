@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DUAN1</string>
+    <string name="mSanPham">Sản phẩm</string>
+    <string name="mKhachHang">Khách hàng</string>
+    <string name="mDonHang">Đơn hàng</string>
+    <string name="mThongKe">Thống kê</string>
+    <string name="mLoaiPet">Loại pet</string>
+</resources>

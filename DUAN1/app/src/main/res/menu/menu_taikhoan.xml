@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mThemTK" android:title="Thêm Admin mới" android:icon="@mipmap/adduser"/>
+    <item android:id="@+id/mDoiMatKhauTK" android:title="Đổi mật khẩu" android:icon="@mipmap/padlock"/>
+    <item android:title="Exit">
+        <menu  >
+
+            <item android:id="@+id/mDangXuatTK" android:title="Đăng xuất" android:icon="@mipmap/logout"/>
+            <item android:id="@+id/mThoatApp" android:title="Thoát" android:icon="@mipmap/poweroff"/>
+        </menu>
+    </item>
+
+</menu>

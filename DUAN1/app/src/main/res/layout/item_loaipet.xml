@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ECEAEA"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtMaLoai"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã pet:"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtTenLoai"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên pet:"
+            android:textSize="20dp"
+            android:layout_marginLeft="40dp"
+            android:textStyle="italic|bold"
+            android:textColor="#EC52E9"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ivSuaLoaiPet"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/edit" />
+
+        <ImageView
+            android:id="@+id/ivXoaLoaiPet"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/xoa"/>
+    </LinearLayout>
+
+
+</LinearLayout>

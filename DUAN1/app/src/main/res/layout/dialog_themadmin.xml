@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="#EC52E9"
+        android:layout_margin="0dp"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#F3ECEC"
+        android:text="THÊM ADMIN" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên tài khoản:"
+        android:textSize="18dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="55dp"
+        android:textStyle="bold|italic"
+        android:textColor="#EC52E9"/>
+    <EditText
+        android:id="@+id/et_tenTkAddAdmin"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:paddingLeft="30dp"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:hint="Tạo tên tài khoản..."
+        android:background="@drawable/botron_edittext"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mật khẩu:"
+        android:textSize="18dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="55dp"
+        android:textStyle="bold|italic"
+        android:textColor="#EC52E9"/>
+    <EditText
+        android:id="@+id/et_NewPassAddAdmin"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:paddingLeft="30dp"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:inputType="textPassword"
+        android:hint="Tạo mật khẩu..."
+        android:background="@drawable/botron_edittext"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check mật khẩu:"
+        android:textSize="18dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="55dp"
+        android:textStyle="bold|italic"
+        android:textColor="#EC52E9"/>
+    <EditText
+        android:id="@+id/et_RePassAddAdmin"
+        android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:paddingLeft="30dp"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:hint="Nhập lại mật khẩu..."
+        android:background="@drawable/botron_edittext"/>
+</LinearLayout>

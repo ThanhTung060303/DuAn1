@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context=".Activity_Mua_SP" >
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBackMuaPet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@mipmap/left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textColor="#EC52E9"
+            android:textSize="18dp"
+            android:layout_marginLeft="75dp"
+            android:text="Thông tin sản phẩm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="360dp"
+            >
+            <ImageView
+                android:id="@+id/ivSanPhamMua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/auto"
+                android:scaleType="centerCrop"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="Mã sp:" />
+
+                <TextView
+                    android:id="@+id/txtMaSP"
+                    android:layout_width="0dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="Tên sp:" />
+
+                <TextView
+                    android:id="@+id/txtTenSPMua"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textColor="#9C27B0"
+                    android:layout_weight="2"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="Tuổi (tháng):" />
+
+                <TextView
+                    android:id="@+id/txtTuoiSP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColor="#202020"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:text="Loại:" />
+
+                <TextView
+                    android:id="@+id/txtLoaiSP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColor="#202020"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:text="TextView" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Giá:" />
+
+        <TextView
+            android:id="@+id/txtGiaSPMua"
+            android:layout_width="0dp"
+            android:textColor="#F44336"
+            android:textSize="19dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_BackTrangChu"
+            android:layout_width="140dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botron_button"
+            android:text="Trang chủ" />
+
+        <Button
+            android:id="@+id/btn_MuaPet"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botron_button"
+            android:text="Mua ngay" />
+    </LinearLayout>
+
+</LinearLayout>

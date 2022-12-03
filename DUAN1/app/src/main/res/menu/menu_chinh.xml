@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mSanPham" android:title="@string/mSanPham" android:icon="@mipmap/cat"/>
+    <item android:id="@+id/mKhachHang" android:title="@string/mKhachHang" android:icon="@mipmap/client"/>
+    <item android:id="@+id/mDonHang" android:title="@string/mDonHang" android:icon="@mipmap/shopping"/>
+    <item android:id="@+id/mLoaiPet" android:title="@string/mLoaiPet" android:icon="@mipmap/pawprint"/>
+</menu>
