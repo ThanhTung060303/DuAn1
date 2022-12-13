@@ -93,6 +93,20 @@ public class Adapter_Admin_Cho extends BaseAdapter {
             });
 
         }
+        else if(trangthai==1){
+            viewOfItem.txtTrangThai.setText("Chờ xác nhận");
+            viewOfItem.txtTrangThai.setTextColor(ContextCompat.getColor(c, R.color.purple_200));
+            viewOfItem.txtXemTT.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //
+                    Intent i = new Intent(c, Activity_Pet_DaMua.class);
+                    int mapet = listCho.get(position).getMapet();
+                    i.putExtra("mapet",mapet);
+                    ((Activity)c).startActivityForResult(i,999);
+                }
+            });
+        }
         else{
             viewOfItem.txtTrangThai.setText("Đã bán");
             viewOfItem.txtTrangThai.setTextColor(ContextCompat.getColor(c, R.color.red));

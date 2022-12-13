@@ -79,7 +79,15 @@ public class Activity_Mua_SP extends AppCompatActivity {
         btnMua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showDiaLogYesNo("Xác nhận đơn hàng của bạn!");
+                String ngaymua = "Chưa mua";
+                boolean check = donHangDAO.themDonHangMoi(mapet,matk,ngaymua);
+                if(check){
+                    showDiaLogAddThanhCong("Đơn hàng của bạn đang chờ xác nhận!");
+                    petDAO.thayDoiTrangThaiPet(mapet,1);
+                }
+                else{
+                    showDiaLog("Mua không thành công!");
+                }
             }
         });
 
@@ -93,47 +101,14 @@ public class Activity_Mua_SP extends AppCompatActivity {
 
 
     }
-
-    public String getNow(){
+    /*public String getNow(){
         // lấy thời gian
         Date date = Calendar.getInstance().getTime();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
         String ngay = simpleDateFormat.format(date);
         return ngay;
     }
-
-    private void showDiaLogYesNo(String x){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = getLayoutInflater();
-        View view = inflater.inflate(R.layout.dialog_y_n,null);
-        TextView hienthi = view.findViewById(R.id.txtCauHoi);
-        hienthi.setText(x);
-        builder.setView(view);
-
-        builder.setPositiveButton("Mua", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                String now = getNow();
-                boolean check = donHangDAO.themDonHangMoi(mapet,matk,now);
-                if(check){
-                    showDiaLogAddThanhCong("Mua thành công!");
-                    petDAO.thayDoiTrangThaiPet(mapet);
-                }
-                else{
-                    showDiaLog("Mua không thành công!");
-                }
-
-            }
-        });
-        builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
-    }
-
+ */
     private void showDiaLog(String x){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();

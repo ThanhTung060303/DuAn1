@@ -1,7 +1,7 @@
 package com.example.duan1.Model;
 
 public class DonHang {
-    private int madon,manguoimua,masp,giatri;
+    private int madon,manguoimua,masp,giatri,trangthaimua;
     private String ngaymua,tenpet,tentk,hinhanh;
 
     public DonHang(int madon, int manguoimua, int masp) {
@@ -10,22 +10,32 @@ public class DonHang {
         this.masp = masp;
     }
 
-    public DonHang(int madon, String tenpet,String hinhanh, String ngaymua, int giatri) {
+    public DonHang(int madon, String tenpet,String hinhanh, String ngaymua, int giatri,int trangthaimua) {
         this.madon = madon;
         this.giatri = giatri;
         this.ngaymua = ngaymua;
         this.tenpet = tenpet;
         this.tentk = tentk;
         this.hinhanh = hinhanh;
+        this.trangthaimua = trangthaimua;
     }
 
-    public DonHang(int madon, String tenpet,String hinhanh, String tentk, String ngaymua, int giatri) {
+    public DonHang(int madon, String tenpet,String hinhanh, String tentk, String ngaymua, int giatri,int trangthaimua) {
         this.madon = madon;
         this.giatri = giatri;
         this.ngaymua = ngaymua;
         this.tenpet = tenpet;
         this.tentk = tentk;
         this.hinhanh = hinhanh;
+        this.trangthaimua = trangthaimua;
+    }
+
+    public int getTrangthaimua() {
+        return trangthaimua;
+    }
+
+    public void setTrangthaimua(int trangthaimua) {
+        this.trangthaimua = trangthaimua;
     }
 
     public String getHinhanh() {

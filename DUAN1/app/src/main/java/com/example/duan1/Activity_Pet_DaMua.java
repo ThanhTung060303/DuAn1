@@ -82,6 +82,7 @@ public class Activity_Pet_DaMua extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Activity_Pet_DaMua.this, Activity_XemDonHang.class);
                 String tenpet = sharedPreferences.getString("tenpet","");
+                i.putExtra("mapet",mapet);
                 i.putExtra("tenpet",tenpet);
                 startActivityForResult(i,999);
             }

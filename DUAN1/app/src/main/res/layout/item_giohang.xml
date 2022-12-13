@@ -8,14 +8,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="185dp"
+        android:layout_height="227dp"
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
             android:layout_width="140dp"
-            android:layout_marginTop="15dp"
             android:layout_height="140dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="10dp"
             app:cardCornerRadius="360dp">
 
@@ -106,7 +106,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -126,6 +127,15 @@
                     android:textColor="@color/red"
                     android:textSize="17dp" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_User_HuyDon"
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botron_button"
+                android:textStyle="bold"
+                android:text="hủy đơn" />
 
         </LinearLayout>
 

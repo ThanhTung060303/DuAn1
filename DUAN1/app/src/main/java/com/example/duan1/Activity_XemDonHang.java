@@ -26,43 +26,53 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Activity_XemDonHang extends AppCompatActivity {
+    Button btn_chotdon,btn_huydon;
     ImageView imageView, ivBack;
     TextView txtmadon, txttensp,txtngaymua,txtgia,txtTenTK;
     PetDAO petDAO;
     LoaiPetDAO loaiPetDAO;
     DonHangDAO donHangDAO;
-    int mapet,matk;
+    int mapet=0,matk,madon;
     SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_xem_don_hang);
-        imageView = findViewById(R.id.ivBackXemDonHang);
+        imageView = findViewById(R.id.ivSanPhamDonHang);
         ivBack = findViewById(R.id.ivBackXemDonHang);
         txtmadon = findViewById(R.id.txtMaDonXemDonHang);
         txttensp = findViewById(R.id.txtTenSPXemDonHang);
         txtgia = findViewById(R.id.txtGiaSPXemDonHang);
         txtngaymua = findViewById(R.id.txtNgayMuaXemDonHang);
         txtTenTK = findViewById(R.id.txtTenTkXemDonHang);
+        btn_chotdon = findViewById(R.id.btn_Admin_ChotDon);
+        btn_huydon = findViewById(R.id.btn_Admin_HuyDon);
 
+        petDAO = new PetDAO(this);
         // String x = getIntent().getExtras().get("matk").toString();
         String tenpet =getIntent().getExtras().get("tenpet").toString();
+        mapet = petDAO.getMaPet(tenpet);
+        //Toast.makeText(this, "mã pet: "+ mapet, Toast.LENGTH_SHORT).show();
         //matk = Integer.parseInt(x);
 
         sharedPreferences = getSharedPreferences("THONGTINDONHANG",MODE_PRIVATE);
 
-        //petDAO = new PetDAO(this);
+
         //loaiPetDAO = new LoaiPetDAO(this);
         donHangDAO = new DonHangDAO(this);
         boolean check = donHangDAO.checkDonHang(tenpet);
         if(check) {
-            int madon = sharedPreferences.getInt("madon", 0);
+            madon = sharedPreferences.getInt("madon", 0);
             String tensp = sharedPreferences.getString("tenpet", "");
             String hinhanh = sharedPreferences.getString("hinhanh", "");
             String tentk = sharedPreferences.getString("tentk", "");
             String ngaymua = sharedPreferences.getString("ngaymua", "");
             int gia = sharedPreferences.getInt("giatri", 0);
-
+            int trangthaimua = sharedPreferences.getInt("trangthaimua", 0);
+            if(trangthaimua==1){
+                btn_chotdon.setVisibility(View.GONE);
+                btn_huydon.setVisibility(View.GONE);
+            }
             txtmadon.setText(madon + "");
             txttensp.setText(tensp);
             txtTenTK.setText(tentk + "");
@@ -75,6 +85,46 @@ public class Activity_XemDonHang extends AppCompatActivity {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
+            }
+        });
+
+        btn_chotdon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                donHangDAO.thayDoiTrangThaiDonHang(madon);
+                petDAO.thayDoiTrangThaiPet(mapet,2);
+                showDiaLogAddThanhCong("Đã xác nhận đơn hàng này!");
+            }
+        });
+        btn_huydon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                donHangDAO.xoaDonHang(madon);
+                petDAO.thayDoiTrangThaiPet(mapet,0);
+                showDiaLogAddThanhCong("Đã hủy đơn hàng này!");
+            }
+        });
+
+    }
+
+    private void showDiaLogAddThanhCong(String x){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View view = inflater.inflate(R.layout.dialog_thongbao,null);
+        TextView hienthi = view.findViewById(R.id.txtThongTin);
+        Button btn = view.findViewById(R.id.btn_ok);
+        hienthi.setText(x);
+
+        builder.setView(view);
+
+        AlertDialog dialog = builder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
                 finish();
             }
         });

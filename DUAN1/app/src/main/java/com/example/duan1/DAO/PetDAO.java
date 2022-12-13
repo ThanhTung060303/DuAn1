@@ -34,10 +34,10 @@ public class PetDAO {
         }
         return list;
     }
-    public boolean thayDoiTrangThaiPet(int mapet){
+    public boolean thayDoiTrangThaiPet(int mapet,int i){
         SQLiteDatabase sqLiteDatabase = dbHelped.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("trangthai",1);
+        contentValues.put("trangthai",i);
         long check=sqLiteDatabase.update("PET",contentValues,"mapet=?",new String[]{String.valueOf(mapet)});
         if(check==-1){
             return false;
@@ -112,5 +112,19 @@ public class PetDAO {
         if(check==-1)
             return false;
         return true;
+    }
+
+    public int getMaPet (String tenpet){
+        SQLiteDatabase sqLiteDatabase = dbHelped.getReadableDatabase();
+        Cursor cursor = sqLiteDatabase.rawQuery("select mapet from PET where tenpet = ?", new String[]{tenpet});
+        int mapet=0;
+        if(cursor.getCount()!=0){
+            cursor.moveToFirst();
+            do {
+                String txtmapet = cursor.getString(0);
+                mapet = Integer.parseInt(txtmapet);
+            }while (cursor.moveToNext());
+        }
+        return mapet;
     }
 }

@@ -201,4 +201,24 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_Admin_ChotDon"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:background="@drawable/botron_button"
+        android:text="Xác Nhận" />
+
+    <Button
+        android:id="@+id/btn_Admin_HuyDon"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:background="@drawable/botron_button"
+        android:text="Hủy đơn" />
+
 </LinearLayout>

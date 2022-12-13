@@ -61,7 +61,7 @@ public class Adapter_User_TrangChu extends RecyclerView.Adapter<Adapter_User_Tra
 
         holder.txtLoaiSp.setText(loai);
         holder.txtTenSP.setText(list.get(position).getTenpet());
-        holder.txtGia.setText(list.get(position).getGia()+"");
+        holder.txtGia.setText(list.get(position).getGia()+"VND");
         Glide.with(c)
                 .load(list.get(position).getHinhanh())
                 .into(holder.ivSP);

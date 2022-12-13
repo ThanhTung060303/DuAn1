@@ -36,6 +36,8 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/dialog_y_n.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_cho.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_donhang.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_donhang_chuaxn.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_donhang_daban.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_khachhang.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_loaicho.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_loaimeo.xml" value="0.25416666666666665" />
@@ -44,11 +46,15 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_sanpham.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_taikhoan.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_admin_thongke.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_user_donhang_damua.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_user_giohang.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_user_giohang_chuaxn.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_user_giohang_damua.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_user_lienhe.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragment_user_trangchu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/fragmnet_admin_thongke.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/item_donhang.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/item_donhang_chuaxn.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/item_giohang.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/item_khachhang.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/layout/item_loaipet.xml" value="0.25416666666666665" />
@@ -59,13 +65,6 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/menu/menu_chinh.xml" value="0.1" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/menu/menu_taikhoan.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/DUAN1/app/src/main/res/menu/menu_user.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ADMIN/Documents/GitHub/DuAn1/DUAN1/app/src/main/res/layout/activity_mua_sp.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ADMIN/Documents/GitHub/DuAn1/DUAN1/app/src/main/res/layout/activity_pet_da_mua.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ADMIN/Documents/GitHub/DuAn1/DUAN1/app/src/main/res/layout/activity_tai_khoan.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ADMIN/Documents/GitHub/DuAn1/DUAN1/app/src/main/res/layout/activity_them_san_pham.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ADMIN/Documents/GitHub/DuAn1/DUAN1/app/src/main/res/layout/activity_xem_don_hang.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ADMIN/Documents/GitHub/DuAn1/DUAN1/app/src/main/res/layout/fragment_admin_sanpham.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ADMIN/Documents/GitHub/DuAn1/DUAN1/app/src/main/res/layout/fragment_user_giohang.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

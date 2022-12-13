@@ -12,10 +12,13 @@
         android:layout_marginTop="320dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MyPetShop"
-        android:textSize="22dp"
+        android:text="M y P e t S h o p"
+        android:textSize="27dp"
         android:layout_gravity="center"
         android:textStyle="bold|italic"
-        android:textColor="#EC52E9"/>
+        android:textColor="#EC52E9"
+        android:fontFamily="sans-serif-black"
+
+        />
 
 </LinearLayout>
