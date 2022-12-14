@@ -22,31 +22,40 @@
             android:src="@mipmap/pets" />
 
         <LinearLayout
-            android:layout_width="276dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="280dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
-                android:text="Xin chào bạn!"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="14dp"
                 android:textStyle="italic|bold" />
 
             <TextView
                 android:id="@+id/txtTenUserChao"
-                android:layout_width="280dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
-                android:text="user"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="22dp"
                 android:textStyle="bold" />
         </LinearLayout>
+        <EditText
+            android:id="@+id/etTimKiem"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:drawableLeft="@drawable/ic_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:hint="Nhập tên sản phẩm"/>
 
 
         <ImageView

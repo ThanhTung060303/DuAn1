@@ -18,7 +18,7 @@ import com.example.duan1.R;
 
 import java.util.ArrayList;
 
-public class Fragment_User_TrangChu extends Fragment {
+public class Fragment_User_TimKiem extends Fragment {
     PetDAO petDAO;
     public static ArrayList<Pet> list;
     RecyclerView recyclerView;
@@ -29,7 +29,6 @@ public class Fragment_User_TrangChu extends Fragment {
         View view = inflater.inflate(R.layout.fragment_user_trangchu, container, false);
         recyclerView = view.findViewById(R.id.recycleTrangChu);
         petDAO = new PetDAO(getContext());
-        list = petDAO.getAllDSPet();
         loadData(list);
         return view;
     }
