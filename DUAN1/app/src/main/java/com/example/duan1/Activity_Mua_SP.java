@@ -20,6 +20,7 @@ import com.example.duan1.DAO.DonHangDAO;
 import com.example.duan1.DAO.LoaiPetDAO;
 import com.example.duan1.DAO.PetDAO;
 
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -67,10 +68,11 @@ public class Activity_Mua_SP extends AppCompatActivity {
             int gia = sharedPreferences.getInt("gia",0);
             String hinhanh = sharedPreferences.getString("hinhanh","");
 
+            String strgia = NumberFormat.getNumberInstance(Locale.US).format(gia);
             txtmasp.setText(mapet+"");
             txttensp.setText(tensp);
             txttuoi.setText(tuoi+"");
-            txtgia.setText(gia+"");
+            txtgia.setText(strgia+"VND");
             txtloai.setText(tenloai);
             Glide.with(this)
                     .load(hinhanh)

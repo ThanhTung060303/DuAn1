@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -31,6 +32,7 @@ public class Fragment_Admin_Cho extends Fragment {
     Adapter_Admin_Cho adapter;
     PetDAO petDAO;
     ArrayList<Pet> list;
+    TextView txtSL;
 
     @Nullable
     @Override
@@ -38,6 +40,7 @@ public class Fragment_Admin_Cho extends Fragment {
         View view = inflater.inflate(R.layout.fragment_admin_cho, container, false);
         floatadd = view.findViewById(R.id.floataddCho);
         listView = view.findViewById(R.id.listViewCho);
+        txtSL = view.findViewById(R.id.SLCho);
 
         petDAO = new PetDAO(getContext());
         loadDuLieu();
@@ -57,11 +60,9 @@ public class Fragment_Admin_Cho extends Fragment {
 
     private void loadDuLieu(){
         list = petDAO.getDSPet("chó");
-        Log.d("MYLOG", "list.size: " + list.size());
-        for (int i = 0; i < list.size(); i++) {
-            Log.d("MYLOG", "item: " + list.get(i).getHinhanh());
-        }
         adapter = new Adapter_Admin_Cho(getContext(),list,petDAO);
+        int soluong = list.size();
+        txtSL.setText(soluong+"");
         listView.setAdapter(adapter);
     }
 

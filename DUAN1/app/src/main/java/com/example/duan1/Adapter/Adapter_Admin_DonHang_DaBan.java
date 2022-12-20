@@ -20,7 +20,9 @@ import com.example.duan1.Model.DonHang;
 import com.example.duan1.Model.TaiKhoan;
 import com.example.duan1.R;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Adapter_Admin_DonHang_DaBan extends BaseAdapter {
     private Context c;
@@ -69,10 +71,12 @@ public class Adapter_Admin_DonHang_DaBan extends BaseAdapter {
         else{
             viewOfItem = (Adapter_Admin_DonHang_DaBan.ViewOfItem) view.getTag();
         }
+        int gia = list.get(position).getGiatri();
+        String strgia = NumberFormat.getNumberInstance(Locale.US).format(gia);
         viewOfItem.txtMadon.setText(list.get(position).getMadon()+"");
         viewOfItem.txtTenSp.setText(list.get(position).getTenpet());
         viewOfItem.txtNgayMua.setText(list.get(position).getNgaymua());
-        viewOfItem.txtGiatri.setText(list.get(position).getGiatri()+"VND");
+        viewOfItem.txtGiatri.setText(strgia+"VND");
         viewOfItem.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

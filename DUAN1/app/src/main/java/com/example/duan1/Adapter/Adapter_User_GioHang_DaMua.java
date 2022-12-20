@@ -19,7 +19,9 @@ import com.example.duan1.Model.DonHang;
 import com.example.duan1.Model.TaiKhoan;
 import com.example.duan1.R;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Adapter_User_GioHang_DaMua extends BaseAdapter {
     private Context c;
@@ -70,10 +72,12 @@ public class Adapter_User_GioHang_DaMua extends BaseAdapter {
         else{
             viewOfItem = (Adapter_User_GioHang_DaMua.ViewOfItem) view.getTag();
         }
+        int gia = list.get(position).getGiatri();
+        String strgia = NumberFormat.getNumberInstance(Locale.US).format(gia);
         viewOfItem.txtNgayMua.setText(list.get(position).getNgaymua());
         viewOfItem.txtMadon.setText(list.get(position).getMadon()+"");
         viewOfItem.txtTenSP.setText(list.get(position).getTenpet());
-        viewOfItem.txtGia.setText(list.get(position).getGiatri()+ "VND");
+        viewOfItem.txtGia.setText(strgia+ "VND");
         Glide.with(c)
                 .load(list.get(position).getHinhanh())
                 .into(viewOfItem.iv);

@@ -20,6 +20,7 @@ import com.example.duan1.DAO.DonHangDAO;
 import com.example.duan1.DAO.LoaiPetDAO;
 import com.example.duan1.DAO.PetDAO;
 
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -68,6 +69,7 @@ public class Activity_XemDonHang extends AppCompatActivity {
             String tentk = sharedPreferences.getString("tentk", "");
             String ngaymua = sharedPreferences.getString("ngaymua", "");
             int gia = sharedPreferences.getInt("giatri", 0);
+            String strgia = NumberFormat.getNumberInstance(Locale.US).format(gia);
             int trangthaimua = sharedPreferences.getInt("trangthaimua", 0);
             if(trangthaimua==1){
                 btn_chotdon.setVisibility(View.GONE);
@@ -76,7 +78,7 @@ public class Activity_XemDonHang extends AppCompatActivity {
             txtmadon.setText(madon + "");
             txttensp.setText(tensp);
             txtTenTK.setText(tentk + "");
-            txtgia.setText(gia + " VND");
+            txtgia.setText(strgia + " VND");
             txtngaymua.setText(ngaymua);
             Glide.with(this)
                     .load(hinhanh)
@@ -92,7 +94,11 @@ public class Activity_XemDonHang extends AppCompatActivity {
         btn_chotdon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                donHangDAO.thayDoiTrangThaiDonHang(madon);
+                // lấy thời gian
+                Date date = Calendar.getInstance().getTime();
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+                String ngay = simpleDateFormat.format(date);
+                donHangDAO.thayDoiTrangThaiDonHang(madon,ngay);
                 petDAO.thayDoiTrangThaiPet(mapet,2);
                 showDiaLogAddThanhCong("Đã xác nhận đơn hàng này!");
             }

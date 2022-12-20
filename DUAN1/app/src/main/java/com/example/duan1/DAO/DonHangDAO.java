@@ -92,10 +92,11 @@ public class DonHangDAO {
         return true;
     }
 
-    public boolean thayDoiTrangThaiDonHang(int madon){
+    public boolean thayDoiTrangThaiDonHang(int madon, String ngaymua){
         SQLiteDatabase sqLiteDatabase = dbHelped.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("trangthaimua",1);
+        contentValues.put("ngaymua", ngaymua);
         long check=sqLiteDatabase.update("DONHANG",contentValues,"madon=?",new String[]{String.valueOf(madon)});
         if(check==-1)
             return false;

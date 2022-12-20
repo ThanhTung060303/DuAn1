@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/imgSP"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="200dp"
             android:scaleType="centerCrop">
 
         </ImageView>
@@ -28,7 +28,7 @@
             android:id="@+id/txtTenSP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="210dp"
             android:gravity="center"
             android:text="Tên sản phẩm"
             android:textColor="@color/black"
@@ -39,7 +39,7 @@
             android:id="@+id/txtLoaiSP_Trangchu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="230dp"
             android:gravity="center"
             android:text="Tên sản phẩm"
             android:textColor="@color/blue"
@@ -51,8 +51,8 @@
             android:id="@+id/txtGiaSP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="245dp"
-            android:textSize="18dp"
+            android:layout_marginTop="250dp"
+            android:textSize="15dp"
             android:gravity="center"
             android:textColor="#EC52E9"
             android:text="2000">

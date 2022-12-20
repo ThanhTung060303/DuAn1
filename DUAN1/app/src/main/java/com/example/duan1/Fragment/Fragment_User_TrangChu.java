@@ -7,8 +7,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.duan1.Adapter.Adapter_User_TrangChu;
@@ -29,21 +31,19 @@ public class Fragment_User_TrangChu extends Fragment {
         View view = inflater.inflate(R.layout.fragment_user_trangchu, container, false);
         recyclerView = view.findViewById(R.id.recycleTrangChu);
         petDAO = new PetDAO(getContext());
-        list = petDAO.getAllDSPet();
-        loadData(list);
+        loadData();
         return view;
     }
 
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        list = petDAO.getAllDSPet();
-//        loadData();
-//    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadData();
+    }
 
-
-    private void loadData(ArrayList<Pet> list) {
+    private void loadData(){
         petDAO = new PetDAO(getContext());
+        list = petDAO.getAllDSPet();
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
         adapter = new Adapter_User_TrangChu(list, getContext(),petDAO);
         recyclerView.setAdapter(adapter);

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -33,12 +34,14 @@ public class Fragment_Admin_Meo extends Fragment {
     PetDAO petDAO;
     ArrayList<Pet> list;
     SharedPreferences capnhatList;
+    TextView txtSL;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_admin_meo, container, false);
         floatadd = view.findViewById(R.id.floataddMeo);
         listView = view.findViewById(R.id.listViewMeo);
+        txtSL = view.findViewById(R.id.SLMeo);
 
         petDAO = new PetDAO(getContext());
         loadDuLieu();
@@ -59,6 +62,8 @@ public class Fragment_Admin_Meo extends Fragment {
     private void loadDuLieu(){
         list = petDAO.getDSPet("mèo");
         adapter = new Adapter_Admin_Meo(getContext(),list,petDAO);
+        int soluong = list.size();
+        txtSL.setText(soluong+"");
         listView.setAdapter(adapter);
     }
 

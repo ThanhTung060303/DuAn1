@@ -195,7 +195,7 @@
             android:id="@+id/txtGiaSPban"
             android:layout_width="0dp"
             android:textColor="#F44336"
-            android:textSize="19dp"
+            android:textSize="15dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:text="TextView" />

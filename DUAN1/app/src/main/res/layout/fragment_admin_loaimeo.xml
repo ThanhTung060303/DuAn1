@@ -3,9 +3,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Tổng số lượng: "
+            android:gravity="center"
+            android:layout_marginStart="15dp"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            ></TextView>
+        <TextView
+            android:id="@+id/SLLoaiMeo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/red"
+            ></TextView>
+    </LinearLayout>
     <ListView
         android:id="@+id/listViewLoaiMeo"
         android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
         android:layout_height="match_parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

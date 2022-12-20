@@ -26,7 +26,9 @@ import com.example.duan1.DAO.PetDAO;
 import com.example.duan1.Model.Pet;
 import com.example.duan1.R;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Adapter_User_TrangChu extends RecyclerView.Adapter<Adapter_User_TrangChu.ViewHolder>{
     private ArrayList<Pet> list;
@@ -58,10 +60,12 @@ public class Adapter_User_TrangChu extends RecyclerView.Adapter<Adapter_User_Tra
 
         loaiPetDAO = new LoaiPetDAO(c);
         String loai = loaiPetDAO.getTenLoaiPet(maloai);
+        int gia = list.get(position).getGia();
+        String strgia = NumberFormat.getNumberInstance(Locale.US).format(gia);
 
         holder.txtLoaiSp.setText(loai);
         holder.txtTenSP.setText(list.get(position).getTenpet());
-        holder.txtGia.setText(list.get(position).getGia()+"VND");
+        holder.txtGia.setText(strgia+"VND");
         Glide.with(c)
                 .load(list.get(position).getHinhanh())
                 .into(holder.ivSP);

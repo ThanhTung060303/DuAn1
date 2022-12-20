@@ -28,12 +28,14 @@ public class Fragment_Admin_LoaiCho extends Fragment {
     LoaiPetDAO loaiPetDAO;
     AdapterLoaiCho adapter;
     ListView listView;
+    TextView txtSL;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_admin_loaicho, container, false);
         floatAdd = view.findViewById(R.id.floataddLoaiCho);
         listView = view.findViewById(R.id.listViewLoaiCho);
+        txtSL = view.findViewById(R.id.SLLoaiCho);
 
         loaiPetDAO = new LoaiPetDAO(getContext());
         loadDuLieu();
@@ -103,6 +105,8 @@ public class Fragment_Admin_LoaiCho extends Fragment {
     private void loadDuLieu(){
         list = loaiPetDAO.getDSLoaiPet("chó");
         adapter = new AdapterLoaiCho(getContext(),list,loaiPetDAO);
+        int soluong = list.size();
+        txtSL.setText(soluong+"");
         listView.setAdapter(adapter);
     }
 }
